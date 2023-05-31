@@ -88,7 +88,10 @@ h1{
     line-height: 1.5;
 }
 .svg-area .illustrator {
-    width: 550px;
+    width: 500px;
+}
+.svg-area .illustration-2{
+    margin-top: 5rem;
 }
 .getting-started-area{
     display: inline-flex;
@@ -133,11 +136,9 @@ button{
     background: url(/images/bg-curve-mobile.svg);
     background-position: center;
     background-size: cover;
-    padding: 50px 80px;
+    padding: 150px 80px 50px;
     align-items: start;
-}
-.productive-txt{
-    margin-top: 5rem;
+
 }
 .howItWorks-a{
     display: inline-flex;
@@ -248,7 +249,7 @@ button{
 }
 
 
-/* ************ media queries */
+/************* media queries *************************/
 @media (max-width: 1221px){
     h1{
         font-size: 1.3rem;
