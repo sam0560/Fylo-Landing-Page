@@ -33,9 +33,10 @@
             family, and co-workers.
           </p>
           <div>
-            <form class="getting-started-area">
+            <form class="getting-started-area" novalidate onsubmit="validateEmail(event)">
               <div>
-                <input type="email" class="input-email" placeholder="Enter your email..." required>
+                <input type="email" class="input-email" placeholder="Enter your email...">
+                <small id="error-message">Please check your email</small>
               </div>
               <div>
                 <button class="getting-started-btn">getting started</button>
@@ -92,9 +93,10 @@
           </p>
         </div>
         <div>
-          <form class="contact-mail-area">
+          <form class="contact-mail-area" novalidate  onsubmit="validateEmail2(event)">
             <div>
-              <input type="email" class="input-email contact-input-mail" placeholder="Enter your email..." required>
+              <input type="email" class="input-email contact-input-mail" placeholder="Enter your email...">
+              <small id="error-message2">Please check your email</small>
             </div>
             <div>
               <button class="contact-btn">getting started for free</button>
@@ -150,5 +152,34 @@
 
   <footer>
   </footer>
+
+  <script>
+    const validateEmail = (event) => {
+        let emailInput = document.querySelector(".input-email");
+        let errorMessage = document.getElementById("error-message");
+  
+        if (!emailInput.value.includes('@')) {
+          emailInput.classList.add("invalid");
+          errorMessage.style.display = "block";
+          event.preventDefault();
+        } else {
+          emailInput.classList.remove("invalid");
+          errorMessage.style.display = "none";
+        }
+    }
+    const validateEmail2 = (event) => {
+        let emailInput = document.querySelector(".contact-input-mail");
+        let errorMessage = document.getElementById("error-message2");
+  
+        if (!emailInput.value.includes('@')) {
+          emailInput.classList.add("invalid");
+          errorMessage.style.display = "block";
+          event.preventDefault();
+        } else {
+          emailInput.classList.remove("invalid");
+          errorMessage.style.display = "none";
+        }
+    }
+  </script>
 </body>
 </html>
